@@ -12,7 +12,7 @@ $conn = pg_connect($connStr);
 
 
 
-$sql="INSERT INTO \"user\" (\"id\") VALUES ('ExtensionTest')";
+$sql="INSERT INTO \"user\" (\"id\") VALUES ('ExtewwwwwwwwwwnsionTest')";
 $result = pg_query($conn,$sql);
 //simple check
 $result = pg_query($conn, "select * from \"user\"");
