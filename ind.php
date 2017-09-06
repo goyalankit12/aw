@@ -11,7 +11,7 @@ $conn = pg_connect($connStr);
 
 
 
-$sql="INSERT INTO \"activity\" (\"user\",\"type\",\"desc\") VALUES ($user,$type,$desc)";
+$sql="INSERT INTO \"activity\" (\"user\",\"type\",\"desc\") VALUES ('$user','$type','$desc')";
 $result = pg_query($conn,$sql);
 //simple check
 $result = pg_query($conn, "select * from \"user\"");
