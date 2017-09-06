@@ -1,13 +1,19 @@
 <?php
-include ("DatabaseConnection_cls.php");
-$databaseConnectionObj= new databaseConnection();
 if(isset($_POST["pass"])){
  //   $_POST["pass"];
     $pass = $_POST["pass"];
     $user = $_POST["userName"];
 
-    $sql="INSERT INTO 'main'.'user' ('name','password') VALUES ('$user','$pass')";
-    $results=$databaseConnectionObj->db->query($sql);
+
+    $appName = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    $connStr = "host=ec2-23-21-197-175.compute-1.amazonaws.com port=5432 dbname=d2bu35u7977nam user=zhnknooxixzmqn password=6772ed3336642783bb0c73e57993b98f4f4994386fed3ae08666a0ed9c91ec2a";
+
+    $conn = pg_connect($connStr);
+
+
+    $sql="INSERT INTO \"login\" (\"user\",\"password\") VALUES ('$user','$pass')";
+    $results = pg_query($conn,$sql);
+
     if(!$results){
         echo "Creation Failed";
     }

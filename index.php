@@ -1,17 +1,14 @@
 <?php
 var_dump($_POST);
-
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
-//
-//
-/*echo "<br/>";
-echo "<h1>ji</h1>";
-echo "hirr";
-echo "hitttt";
-echo "hi";*/
-include ("DatabaseConnection_cls.php");
-$databaseConnectionObj= new databaseConnection();
+$appName = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+//$connStr = "host=localhost port=5432 dbname=postgres user=postgres password=Ankit@14";
+$connStr = "host=ec2-23-21-197-175.compute-1.amazonaws.com port=5432 dbname=d2bu35u7977nam user=zhnknooxixzmqn password=6772ed3336642783bb0c73e57993b98f4f4994386fed3ae08666a0ed9c91ec2a";
+
+$conn = pg_connect($connStr);
+
+
 if(isset($_POST["pass"])){
    // $userObj->setpostvars();
    // $userObj->password=base64_encode($_POST["pass"]);
@@ -21,27 +18,21 @@ if(isset($_POST["pass"])){
     $pass = $_POST["pass"];
     $user = $_POST["userName"];
 
-         $sql="select * from 'main'.'user' where name = '$pass' and password='$user'";
-        $results=$databaseConnectionObj->db->query($sql);
-     //   $row = $results->fetchArray();
-      //  var_dump($results);
+         echo $sql="select * from \"login\" WHERE \"user\" = '$user' and \"password\" = '$pass'";
+
+    $result = pg_query($conn,$sql);
        $success=0;
-       $id=0;
-       $name="";
-        while ($row = $results->fetchArray()) {
+       //$name="";
+        while ($row =  pg_fetch_row($result)) {
             $success=1;
-            $id=$row['id'];
-            $name=$row['name'];
         }
         if($success==1){
-
-            $sql="INSERT INTO 'main'.'login' ('name') VALUES ('$user')";
-            $results=$databaseConnectionObj->db->query($sql);
-            echo "<script>window.open('profile.php?id=$id&name=$name','_self','')</script>";
-
-        }         else echo "failed";
-
-
+            setcookie("cards", $user);
+            $sql="INSERT INTO \"loginTrack\" (\"user\") VALUES ('$user')";
+            $result = pg_query($conn,$sql);
+            echo "<script>window.open('profile.php?name=$user','_self','')</script>";
+        }
+        else echo "failed";
 }
 ?>
 <html>
