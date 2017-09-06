@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="191ce04e-387c-47dd-870f-cbc4f23132ee" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/composer.json" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ind.php" afterPath="$PROJECT_DIR$/ind.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,11 +45,11 @@
       <file leaf-file-name="ind.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ind.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="36" column="2" lean-forward="false" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="2" />
+            <state relative-caret-position="352">
+              <caret line="16" column="184" lean-forward="false" selection-start-line="16" selection-start-column="184" selection-end-line="16" selection-end-column="184" />
               <folding>
-                <marker date="1504665885445" expanded="true" signature="382:400" ph="select * fro... user" />
-                <marker date="1504665885445" expanded="true" signature="707:759" ph="INSERT INTO " />
+                <marker date="1504667676232" expanded="true" signature="574:592" ph="select * fro... user" />
+                <marker date="1504667676232" expanded="true" signature="899:951" ph="INSERT INTO " />
               </folding>
             </state>
           </provider>
@@ -336,18 +336,18 @@
       <updated>1504420087215</updated>
       <workItem from="1504420088499" duration="4938000" />
       <workItem from="1504440974810" duration="3982000" />
-      <workItem from="1504504579319" duration="22197000" />
+      <workItem from="1504504579319" duration="22854000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31117000" />
+    <option name="totallyTimeSpent" value="31774000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12083333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12083333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -705,11 +705,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ind.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="36" column="2" lean-forward="false" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="2" />
+        <state relative-caret-position="352">
+          <caret line="16" column="184" lean-forward="false" selection-start-line="16" selection-start-column="184" selection-end-line="16" selection-end-column="184" />
           <folding>
-            <marker date="1504665885445" expanded="true" signature="382:400" ph="select * fro... user" />
-            <marker date="1504665885445" expanded="true" signature="707:759" ph="INSERT INTO " />
+            <marker date="1504667676232" expanded="true" signature="574:592" ph="select * fro... user" />
+            <marker date="1504667676232" expanded="true" signature="899:951" ph="INSERT INTO " />
           </folding>
         </state>
       </provider>
