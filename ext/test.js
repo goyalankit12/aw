@@ -36,7 +36,7 @@ $("a").click(function(e) {
         type: "POST",
         action: 'xhttp',
         url: "https://aw-assignment1.herokuapp.com/ind.php",
-        data: {myData:"aaaaurlretained"},
+        data: {type:"link",desc:"test"},
         success: function(response){
             alert(response+'Items added');
         },
