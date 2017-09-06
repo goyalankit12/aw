@@ -10,39 +10,33 @@ echo "<h1>ji</h1>";
 echo "hirr";
 echo "hitttt";
 echo "hi";*/
-include ("DatabaseConnection_cls.php");
-$databaseConnectionObj= new databaseConnection();
-if(isset($_POST["pass"])){
-   // $userObj->setpostvars();
-   // $userObj->password=base64_encode($_POST["pass"]);
-   // $userObj->secondLogin=0;
-   // $userObj->checkUser();
-     $_POST["pass"];
-    $pass = $_POST["pass"];
-    $user = $_POST["userName"];
+$appName = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+$connStr = "host=localhost port=5432 dbname=postgres user=postgres password=Ankit@14";
 
-         $sql="select * from 'main'.'user' where name = '$pass' and password='$user'";
-        $results=$databaseConnectionObj->db->query($sql);
-     //   $row = $results->fetchArray();
-      //  var_dump($results);
-       $success=0;
-       $id=0;
-       $name="";
-        while ($row = $results->fetchArray()) {
-            $success=1;
-            $id=$row['id'];
-            $name=$row['name'];
-        }
-        if($success==1){
+//simple check
+$conn = pg_connect($connStr);
+$result = pg_query($conn, "select * from user");
+var_dump(pg_fetch_all($result));    //   $row = $results->fetchArray();
+    //  var_dump($results);
+    $success=0;
+    $id=0;
+    $name="";
+   /* while ($row = $results->fetchArray()) {
+        $success=1;
+        $id=$row['id'];
+        $name=$row['name'];
+    }
+    if($success==1){
 
-            $sql="INSERT INTO 'main'.'login' ('name') VALUES ('$user')";
-            $results=$databaseConnectionObj->db->query($sql);
-            echo "<script>window.open('profile.php?id=$id&name=$name','_self','')</script>";
+      //  $sql="INSERT INTO 'main'.'login' ('name') VALUES ('$user')";
+        //$results=$databaseConnectionObj->db->query($sql);
+        //echo "<script>window.open('profile.php?id=$id&name=$name','_self','')</script>";
 
-        }         else echo "failed";
+    }
+    else echo "failed";
+*/
 
 
-}
 ?>
 <html>
 <head>
@@ -56,7 +50,7 @@ if(isset($_POST["pass"])){
             var x=document.forms["myform"];
             if (x.userName.value==null || x.userName.value=="")
             {
-               alert("Enter username");
+                alert("Enter username");
                 return false;
             }
             else if (x.pass.value==null || x.pass.value=="")
