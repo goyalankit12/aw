@@ -16,7 +16,7 @@ $sql="INSERT INTO \"user\" (\"id\") VALUES ('ExtensionTest')";
 $result = pg_query($conn,$sql);
 //simple check
 $result = pg_query($conn, "select * from \"user\"");
-var_dump(pg_fetch_all($result));    //   $row = $results->fetchArray();
+//var_dump(pg_fetch_all($result));    //   $row = $results->fetchArray();
 //  var_dump($results);
 $success=0;
 $id=0;
