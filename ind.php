@@ -1,5 +1,5 @@
 <?php
-var_dump($_POST);
+//var_dump($_POST);
 
 echo $_COOKIE["cards"];
 error_reporting(E_ALL);

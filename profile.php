@@ -1,13 +1,15 @@
 <?php
-$id = $_GET['id'];
+
 $user = $_GET['name'];
-include ("DatabaseConnection_cls.php");
+/*include ("DatabaseConnection_cls.php");
 $databaseConnectionObj= new databaseConnection();
 $sql="select * from 'main'.'login' where name = '$user'";// and password='$user'";
 $results=$databaseConnectionObj->db->query($sql);
   $row = $results->fetchArray();
     var_dump($row);
-  ?>
+
+*/
+?>
 
 <html>
 <head>
