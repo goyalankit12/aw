@@ -15,8 +15,11 @@ To run this assignment,
 3. Once, you are done with above two steps. Then open stackoverflow. It will record all the user activties.
 4. on the Profile page you can see the login details.
 5. Entry page is index.php
-(three default are provided).
+6. Logs are stored in postgress database and displayed on the profile page.
 
+
+
+(three default are provided).
 user password
 aaa aaa
 bbb bbb
