@@ -1,0 +1,23 @@
+CSE591	Adaptive	Web
+Assignment #1: Web pages with behavior logging services.
+Ankit Goyal
+1210292821
+
+This project is developed in PHP and database is Postgress. This is hosted on Heroku server at URL : https://aw-assignment1.herokuapp.com/
+I developed Chrome extension to track the user activities on stackoverflow page.
+
+How to Run:
+
+To run this assignment,
+
+1. You need to download and enable the chrome extension in zip file.
+2. go to the url provided above and login into your account
+3. Once, you are done with above two steps. Then open stackoverflow. It will record all the user activties.
+4. on the Profile page you can see the login details.
+5. Entry page is index.php
+(three default are provided).
+
+user password
+aaa aaa
+bbb bbb
+ccc ccc

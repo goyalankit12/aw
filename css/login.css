@@ -65,12 +65,10 @@ label:hover ~ input[type=password] {
 .Loginform {
 
  	background:FCFBFB;
-	height:400px; 
-  width:400px;
+
   margin:30px auto;
   border-radius:0.4em;
   border:8px solid #EBE3F8;
-  overflow:hidden;
   position:relative;
   box-shadow: 0 5px 10px 5px rgba(0,0,0,0.2);
 }
