@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "user Tracking",
-  "description": "This extension shows a Google Image search result for the current page",
+  "description": "This extension helps to track user activities",
   "version": "1.0",
 
   "browser_action": {
@@ -21,7 +21,7 @@
 
   ],
   "content_scripts":[{
-    "matches":["https://*/*","http://*/*"],
+    "matches":["https://stackoverflow.com/*","http://stackoverflow.com/*"],
    "js":["jquery.js","test.js"]
   }
   ]

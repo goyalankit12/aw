@@ -1,6 +1,30 @@
+
+
+$( window ).scroll(function(event) {
+    $.ajax({
+        type: "POST",
+        action: 'xhttp',
+        url: "https://aw-assignment1.herokuapp.com/ind.php",
+        data: {type:"Scroll",desc:"window is scrolled."},
+        success: function(response){
+            alert(response+'Items addeddddddddddddddddddd');
+        },
+        error: function(e){
+            console.log(e.message);
+            alert(e.message+'  Addition Failed');
+        }
+    });
+});
+
+
+
 $("a").click(function(e) {
 
-    var desc= $(event.target).attr('class')+":      "+e.target.toString();
+    var desc="";
+
+    if(typeof $(event.target).attr('class') !== 'undefined' && $(event.target).attr('class') !== 'undefined')desc = $(event.target).attr('class');
+    if(typeof e.target.toString() !== 'undefined' && e.target.toString() !== 'undefined')desc = desc+" "+e.target.toString();
+
     alert(desc);
     $.ajax({
         type: "POST",
@@ -8,7 +32,7 @@ $("a").click(function(e) {
         url: "https://aw-assignment1.herokuapp.com/ind.php",
         data: {type:"Achor Element",desc:desc},
         success: function(response){
-            alert(response+'Items added');
+            alert(response+'Items addeddddddddddddddddddd');
         },
         error: function(e){
             console.log(e.message);
@@ -20,7 +44,8 @@ $("a").click(function(e) {
 
 $("input").click(function(e) {
 
-    var desc= $(event.target).attr('class')+":      "+e.target.toString();
+    var desc="";
+    if(typeof $(event.target).attr('class') !== 'undefined' && $(event.target).attr('class') !== 'undefined')desc = $(event.target).attr('class');
     alert(desc);
 
     $.ajax({
@@ -37,6 +62,4 @@ $("input").click(function(e) {
         }
     });
 
-   // alert("aaa"+e.target.toString()); // gives the element's ID
-    // gives the elements class(es)
 });

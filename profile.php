@@ -47,7 +47,7 @@ $resultActivity = pg_query($conn,$sql);
         <li> <b>Comments:</b> This helpls us tracking the type and quality of the comments made by user. This can also give us idea about the areas in which user has knowledge.</li>
         <li> <b>Click:</b> This helpls us tracking the click made by user and context attached to that click.</li>
         <li> <b>Scrolling Page:</b> This helpls us tracking the amount of information read by user on particular topic. How many/ detailed answers he read or he just get satisfy with top answers.</li>
-        <li> <b>Bookmark:</b> This helpls us tracking the pages frequently visited by a user.</li>
+        <li> <b>Search:</b> This helpls us tracking the search done by user.</li>
 
     </ol>
     </p>
