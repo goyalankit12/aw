@@ -75,7 +75,7 @@ $resultActivity = pg_query($conn,$sql);
                     $i=1;
                     while ($row =  pg_fetch_row($result)) {
                         ?>
-                        <tr> <td> <?php echo $i++;?></td><td><?php echo strtotime($row[1]); ?></td> </tr>
+                        <tr> <td> <?php echo $i++;?></td><td><?php echo date("Y-m-d H:i:s.u", strtotime($row[1])); ?></td> </tr>
                     <?php }  ?>
             </tbody>
 
@@ -111,7 +111,7 @@ $resultActivity = pg_query($conn,$sql);
                     $i=1;
                     while ($row =  pg_fetch_row($resultActivity)) {
                         ?>
-                        <tr> <td> <?php echo $i++;?></td><td><?php echo $row[1]; ?></td><td><?php echo $row[2]; ?></td><td><?php echo strtotime($row[3]); ?></td> </tr>
+                        <tr> <td> <?php echo $i++;?></td><td><?php echo $row[1]; ?></td><td><?php echo $row[2]; ?></td><td><?php echo date("Y-m-d H:i:s.u", strtotime($row[3])); ?></td> </tr>
                     <?php }  ?>
                     </tbody>
 
