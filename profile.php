@@ -10,7 +10,7 @@ $result = pg_query($conn,$sql);
 
 $sql="SELECT * from \"activity\" where \"user\" = '$user'";
 $resultActivity = pg_query($conn,$sql);
-
+date_default_timezone_set('MST')
 
 ?>
 
@@ -27,7 +27,7 @@ $resultActivity = pg_query($conn,$sql);
 <h1 align="center" style="color: #f24537"><?php echo $user; ?></h1>
 <div align="center"><a style="font-size: 16px;" href="index.php">logout</a></div>
 <br/><br/>
-<div align="center"><a style="font-size: 18px;" href="https://stackoverflow.com/questions/tagged/java?sort=frequent&pageSize=15">Goto: Stackoverflow </a></div>
+<div align="center"><a style="font-size: 18px;"  target="_blank" href="https://stackoverflow.com/questions/tagged/java?sort=frequent&pageSize=15") >Goto: Stackoverflow </a></div>
 
 
 <div align="center" class="Loginform" >
