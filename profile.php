@@ -16,7 +16,7 @@ $resultActivity = pg_query($conn,$sql);
 
 <html>
 <head>
-    <link href="CSS/login.css" rel="stylesheet" type="text/css">
+    <link href="login.css" rel="stylesheet" type="text/css">
     <SCRIPT LANGUAGE="JavaScript">
 
 
@@ -47,7 +47,6 @@ $resultActivity = pg_query($conn,$sql);
         <li> <b>Comments:</b> This helpls us tracking the type and quality of the comments made by user. This can also give us idea about the areas in which user has knowledge.</li>
         <li> <b>Click:</b> This helpls us tracking the click made by user and context attached to that click.</li>
         <li> <b>Scrolling Page:</b> This helpls us tracking the amount of information read by user on particular topic. How many/ detailed answers he read or he just get satisfy with top answers.</li>
-        <li> <b>Search:</b> This helpls us tracking the search done by user.</li>
 
     </ol>
     </p>
@@ -76,7 +75,7 @@ $resultActivity = pg_query($conn,$sql);
                     $i=1;
                     while ($row =  pg_fetch_row($result)) {
                         ?>
-                        <tr> <td> <?php echo $i++;?></td><td><?php echo $row[1]; ?></td> </tr>
+                        <tr> <td> <?php echo $i++;?></td><td><?php echo strtotime($row[1]); ?></td> </tr>
                     <?php }  ?>
             </tbody>
 
@@ -112,7 +111,7 @@ $resultActivity = pg_query($conn,$sql);
                     $i=1;
                     while ($row =  pg_fetch_row($resultActivity)) {
                         ?>
-                        <tr> <td> <?php echo $i++;?></td><td><?php echo $row[1]; ?></td><td><?php echo $row[2]; ?></td><td><?php echo $row[3]; ?></td> </tr>
+                        <tr> <td> <?php echo $i++;?></td><td><?php echo $row[1]; ?></td><td><?php echo $row[2]; ?></td><td><?php echo strtotime($row[3]); ?></td> </tr>
                     <?php }  ?>
                     </tbody>
 

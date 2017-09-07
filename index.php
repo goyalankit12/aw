@@ -32,7 +32,7 @@ if(isset($_POST["pass"])){
 ?>
 <html>
 <head>
-    <link href="CSS/login.css" rel="stylesheet" type="text/css">
+    <link href="login.css" rel="stylesheet" type="text/css">
     <SCRIPT LANGUAGE="JavaScript">
 
 
