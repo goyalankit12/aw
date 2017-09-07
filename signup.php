@@ -22,7 +22,7 @@ if(isset($_POST["pass"])) {
         if (!$results) {
             echo "Creation Failed";
         } else {
-            echo "<script>window.open('index.php?msg=Successfully Created','_self','')</script>";
+            echo "<script>window.open('index.php?msg=Successfully Created','','')</script>";
         }
       }
 }
