@@ -20,9 +20,9 @@ if(isset($_POST["pass"])) {
        $sql="INSERT INTO \"login\" (\"user\",\"password\") VALUES ('$user','$pass')";
         $results = pg_query($conn, $sql);
         if (!$results) {
-            echo "Creation Failed";
+            echo "<br/><br/><br/>Creation Failed";
         } else {
-            echo "<script>window.open('index.php?msg=Successfully Created','','')</script>";
+            echo "<script>window.open('index.php?msg=Successfully Created','_self','')</script>";
         }
       }
 }
