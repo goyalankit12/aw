@@ -47,6 +47,9 @@ date_default_timezone_set('MST')
         <li> <b>Comments:</b> This helpls us tracking the type and quality of the comments made by user. This can also give us idea about the areas in which user has knowledge.</li>
         <li> <b>Click:</b> This helpls us tracking the click made by user and context attached to that click.</li>
         <li> <b>Scrolling Page:</b> This helpls us tracking the amount of information read by user on particular topic. How many/ detailed answers he read or he just get satisfy with top answers.</li>
+        <li> <b>Input field:</b> This helpls us tracking the interaction of user with any  input field on the site. It might be text area or anything else. It help us to understand the usser interest.</li>
+        <li> <b>Login:</b> This helpls us tracking the user time and the frequency on Stackoverflow.</li>
+
 
     </ol>
     </p>
