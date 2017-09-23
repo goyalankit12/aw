@@ -101,6 +101,9 @@ date_default_timezone_set('MST')
                             Type
                         </td>
                         <td>
+                            Head
+                        </td>
+                        <td>
                             Description
                         </td>
                         <td>
@@ -114,7 +117,7 @@ date_default_timezone_set('MST')
                     $i=1;
                     while ($row =  pg_fetch_row($resultActivity)) {
                         ?>
-                        <tr> <td> <?php echo $i++;?></td><td><?php echo $row[1]; ?></td><td><?php echo $row[2]; ?></td><td><?php echo date("Y-m-d H:i:s.u", strtotime($row[3])); ?></td> </tr>
+                        <tr> <td> <?php echo $i++;?></td><td><?php echo $row[1]; ?></td><td><?php echo $row[4]; ?></td><td><?php echo $row[2]; ?></td><td><?php echo date("Y-m-d H:i:s.u", strtotime($row[3])); ?></td> </tr>
                     <?php }  ?>
                     </tbody>
 
