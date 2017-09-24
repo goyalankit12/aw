@@ -10,7 +10,25 @@ $result = pg_query($conn,$sql);
 
 $sql="SELECT * from \"activity\" where \"user\" = '$user'";
 $resultActivity = pg_query($conn,$sql);
-date_default_timezone_set('MST')
+date_default_timezone_set('MST');
+
+
+$sql="SELECT * from \"activity\" where \"user\" = '$user' and head='Post Question'";
+$post_Question = pg_query($conn,$sql);
+
+$sql="SELECT * from \"activity\" where \"user\" = '$user' and head='Post Answer'";
+$post_Answer = pg_query($conn,$sql);
+
+$sql="SELECT * from \"activity\" where \"user\" = '$user' and head='search'";
+$search = pg_query($conn,$sql);
+
+$sql="SELECT * from \"activity\" where \"user\" = '$user' and head='question-hyperlink'";
+$question = pg_query($conn,$sql);
+
+$sql="SELECT * from \"activity\" where \"user\" = '$user' and head='post-tag'";
+$post_tag = pg_query($conn,$sql);
+
+
 
 ?>
 
