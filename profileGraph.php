@@ -29,6 +29,28 @@ $sql="SELECT * from \"activity\" where \"user\" = '$user' and head='post-tag'";
 $post_tag = pg_query($conn,$sql);
 
 
+//$row=['salesperson','sales'];
+$file = fopen('Bardata.csv', 'w');
+
+$row=['salesperson','sales'];
+fputcsv($file, $row);
+
+$row=['Posting Question',count($post_Question)];
+fputcsv($file, $row);
+
+$row=['post Answer',count($post_Answer)];
+fputcsv($file, $row);
+
+$row=['Question',count($question)];
+fputcsv($file, $row);
+
+$row=['Post Tag',count($post_tag)];
+fputcsv($file, $row);
+
+fclose($file);
+
+
+
 
 ?>
 
@@ -104,7 +126,7 @@ $post_tag = pg_query($conn,$sql);
     </div>
 </div>
 
-
+<iframe src="barGraph.php"></iframe>
 <div align="center" class="Loginform" >
     <h1> Activites Details </h1>
     <div class="inset">
