@@ -64,6 +64,9 @@ fclose($file);
     </SCRIPT>
 </head>
 <body >
+
+<iframe width="100%" src="barGraph.php"></iframe>
+
 <h1 align="center" style="color: #f24537"><?php echo $user; ?></h1>
 <div align="center"><a style="font-size: 16px;" href="index.php">logout</a></div>
 <br/><br/>
@@ -126,7 +129,6 @@ fclose($file);
     </div>
 </div>
 
-<iframe src="barGraph.php"></iframe>
 <div align="center" class="Loginform" >
     <h1> Activites Details </h1>
     <div class="inset">
