@@ -176,11 +176,11 @@ fclose($file);
                 url: "lineGraph.php",
                 data: {user:'<?php echo $user; ?>',desc:d},
                 success: function(response){
-                    //alert(response);
+
                     $('#Daystrends').replaceWith(response);
                 },
                 error: function(e){
-                    // alert(e.message);
+                    
                 }
             });
         }

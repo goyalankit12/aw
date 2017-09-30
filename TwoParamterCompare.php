@@ -25,17 +25,15 @@ $sql="SELECT count(*) from \"activity\" where \"user\" = '$user' and \"head\" = 
 $result = pg_query($conn,$sql);
 
 while ($row =  pg_fetch_row($result)) {
-    //$res=[$value1,$row[0]];
     $res[0]=$row[0];
     fputcsv($file, $res);
 
 }
 
- $sql="SELECT count(*) from \"activity\" where \"user\" = '$user' and \"head\" = '$value2'";
+$sql="SELECT count(*) from \"activity\" where \"user\" = '$user' and \"head\" = '$value2'";
 $result = pg_query($conn,$sql);
 
 while ($row =  pg_fetch_row($result)) {
-    //$res=[$value2,$row[0]];
     $res[1]=$row[0];
     fputcsv($file, $res);
 
