@@ -57,8 +57,8 @@ fclose($file);
 </style>
 <div id="wordDetailedCompare">
 
-    <!-- load the d3.js library -->
-    <script src="//d3js.org/d3.v4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
     <script>
 
         // set the dimensions and margins of the graph
