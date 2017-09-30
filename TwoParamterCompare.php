@@ -53,7 +53,7 @@ $wordSensation['Post Answer']="Post Answers";
 <html>
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <title>Testing Pie Chart</title>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://d3js.org/d3.v3.min.js"></script>
 
@@ -112,7 +112,7 @@ $wordSensation['Post Answer']="Post Answers";
 
         })
         .attr("text-anchor", "middle")
-        .text(function(d, i) { return data[i].label; });        
+        .text(function(d, i) { return data[i].label; });
 
 </script>
 </body>
