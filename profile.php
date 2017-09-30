@@ -241,22 +241,27 @@ fclose($file);
 <ol align="left" >
     <li> <b>Posting Question:</b> This helpls us tracking the questions posted. </li>
     <li> <b>Posting Answer:</b> This helpls us tracking the answer posted by user.</li>
-    <li> <b>Post Tag Search:</b> This helpls us tracking post searched by user.</li>
+    <li> <b>Post Tag Visited:</b> This helpls us tracking post(Tag) visited by user.</li>
     <li> <b>Question Visited:</b> This helpls us tracking the question visited by user. </li>
     <li> <b>Search:</b> This helpls us tracking the questions/ post anything searched by user.</li>
 </ol>
 
 <h5> Pattern Finding </h5>
 <ol align="left" >
-    <li> <b>Chart 1:</b>This help us comparing any two of the above  mentioned five activities. If the user has more count of posting questions as compares to posting answers than that means user primarly visits the site for seeking help else if the count of answer is high than that means he visitis site to answer the ithers questions. similarly, we can draw many more conclusions based on the relative comparision between the activities. </li>
+    <li> <b>Chart 1:</b>This help us comparing any two of the above  mentioned five activities. If the user has more count of posting questions as compares to posting answers than that means user primarly visits the site for seeking help else if the count of answer is high than that means he visitis site to answer the questions. This  means that he has good knowledge of the subject area where he answers the questiosn. similarly, we can draw many more conclusions based on the relative comparision between the activities. </li>
     <br/>
-    <li> <b>Chart 2:</b>This help us finding the count of activities by that particular user vs average count of all the activities made by user. This helps us finding how much user is active as compared to other users on the sarckoverflow.  </li>
+    <li> <b>Chart 2:</b>This help us finding the count of activities by that particular user vs average count of all the activities made by all the users. This helps us finding how much user is active as compared to other users on the sarckoverflow. We can also find the pattern of activities for which is a particular  user  is more active than the average users on the site.  </li>
     <br/>
-    <li> <b>chart 3:</b>User can click any of the button to find the pattern of that particular activity for past 30 days. This help us fidning thee pattern of user behaviour is past 30 days. </li>
+    <li> <b>chart 3:</b>User can click any of the button to find the pattern of that particular activity for past 30 days. This help us fiding the pattern of user behaviour for that particular activities for past 30 days. </li>
     <br/>
-    <li> <b>Chart 4:</b>Word Cloud can help us tracking Post Tag visited by that user. Bigger is the cloud more the no.of times user visited that Cloud. This helps us tracking the tags visited by a user. You can click on any of the cloud which will show another bar  graph which displays the count of all the activities which involves that particular tagged post. This helps us finding the activity patterns involved that word. For example for Java is the count of asking question is more ttan posting answers than user is week in tha area but on the hand if Posting answers on SQL topic is more than user is expert in that area.   </li>
+    <li> <b>Chart 4:</b>Word Cloud can help us tracking Post Tag visited by that user. Bigger is the cloud more the no.of times user visited that Cloud. This helps us tracking the tags visited by a user. You can click on any of the cloud which will show another bar  graph which displays the count of all the activities which involves that particular tagged post. This helps us finding the activity patterns involved that word. For example for Java, the count of asking question is more than the count of posting answers than user is week in that area but on the other hand if Posting answers on SQL topic is more than user is expert in that area. This give us topic wise analysis.   </li>
     <br/>
-    <li> <b>Chart 5:</b>Word Cloud can help us tracking Post Tag visited by all the users. Bigger is the cloud more the no.of times users visited that Cloud.You can click on any of the cloud which will show another bar  graph which displays the count of all the activities which involves that particular word. This help us doing compartive study of user behaviour as compared to all the users on site.   </li>
+    <li> <b>Chart 5:</b>Word Cloud can help us tracking Post Tag visited by all the users. Bigger is the cloud more the no.of times users visited that Cloud.You can click on any of the cloud which will show another bar  graph which displays the count of all the activities which involves that particular word. This help us doing compartive study of user behaviour as compared to all the users on site. This also helps us in finding the pattern or the topic where users are asking more question than posting answers or vice versa. we can a lot of relative studies.    </li>
+    <br/>
+    <li> <b>Chart 6:</b> This graph which displays the count of all the activities which involves that particular tagged post. This helps us finding the activity patterns involved that word. For example for Java, the count of asking question is more than the count of posting answers than user is week in that area but on the other hand if Posting answers on SQL topic is more than user is expert in that area. This give us topic wise analysis.   </li>
+    <br/>
+    <li> <b>Chart 7:</b>Based on the word cloud clicked above. This helps us tracking the activities based on that tag word. Bar  graph which displays the count of all the activities which involves that particular word. This help us doing compartive study of user behaviour as compared to all the users on site. This also helps us in finding the pattern or the topic where users are asking more question than posting answers or vice versa. we can a lot of relative studies. which is the most searched topic or etc.    </li>
+
 </ol>
 
 <br/><br/>
@@ -316,14 +321,14 @@ fclose($file);
         <tr>
             <td align="center" width="50%" >
                 <h3>Chart: 4</h3>
-                <h4 >This Bubbles gives the information about the POST TAG search by Logined User.</h4>
-                <h5>Click on the bubble to see the count of interaction which are based on the above word.</h5>
+                <h4 >This Bubbles gives the information about the POST TAG visited by Logined User.</h4>
+                <h5>Click on the bubble to see the count of interaction which are based on the tag word clicked.</h5>
                 <iframe width="100%" height="130%"  src="bubbleGraph.php?user=<?php echo $user;?>"></iframe>
             </td>
             <td align="center" >
                 <h3>Chart: 5</h3>
-                <h4>This Bubbles gives the information about the POST TAG searched by all the Users.</h4>
-                <h5>Click on the bubble to see the count of interaction which are based on the above word.</h5>
+                <h4>This Bubbles gives the information about the POST TAG visited by all the Users.</h4>
+                <h5>Click on the bubble to see the count of interaction which are based on the tag word clicked.</h5>
                 <iframe width="100%" height="130%" src="bubbleGraphCompare.php"></iframe>
             </td>
         </tr>
@@ -385,7 +390,7 @@ fclose($file);
         </tr>
         </thead>
         <tbody>
-
+<!--
         <?php
         $i=1;
         while ($row =  pg_fetch_row($resultActivity)) {
@@ -395,7 +400,7 @@ fclose($file);
         </tbody>
 
     </table>
-
+-->
 
 
 
