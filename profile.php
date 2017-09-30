@@ -264,6 +264,16 @@ fclose($file);
 
 </ol>
 
+<h5> Interactions  </h5>
+
+<ol align="left" >
+    <li> <b>Dropdown:</b>Chart 1 has dropdown interaction to select the parameter to do relative comparison.</li>
+    <li> <b>Button Click:</b> Chart 3 has button clicked functionality to select the activities for past 30 days.</li>
+    <li> <b>Word Cloud Click:</b> Chart 4 has word could click to select the tagged word visited by that user.</li>
+    <li> <b>Word Cloud Click (All User):</b>Chart 5 has word could click to select the tagged word visited by all the user.</li>
+</ol>
+
+
 <br/><br/>
 <div align="center"><h2> Social Visualization</h2></div>
 <br/>
