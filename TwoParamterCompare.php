@@ -60,7 +60,7 @@ $wordSensation['Post Answer']="Post Answers";
     <script type="text/javascript" src="https://mbostock.github.com/d3/d3.geom.js?2.1.3"></script>
     <script type="text/javascript" src="https://mbostock.github.com/d3/d3.layout.js?2.1.3"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
 
     <style type="text/css">
         .slice text {
