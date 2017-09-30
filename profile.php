@@ -197,11 +197,11 @@ fclose($file);
                 url: "TwoParamterCompare.php",
                 data: {user:'<?php echo $user; ?>',value1:value1,value2:value2},
                 success: function(response){
-                    //alert(response);
+                    alert(response);
                     $('#TwoParameter').replaceWith(response);
                 },
                 error: function(e){
-                    // alert(e.message);
+                     alert(e.message);
                 }
             });
         }
