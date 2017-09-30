@@ -364,7 +364,7 @@ fclose($file);
         </table>
     </div>
 </div>
-
+<!--
 <div align="center"  >
     <h1> Activites Details </h1>
 
@@ -390,7 +390,7 @@ fclose($file);
         </tr>
         </thead>
         <tbody>
-<!--
+
         <?php
         $i=1;
         while ($row =  pg_fetch_row($resultActivity)) {
@@ -400,10 +400,11 @@ fclose($file);
         </tbody>
 
     </table>
--->
+
 
 
 
 </div>
+-->
 </body>
 </html>
