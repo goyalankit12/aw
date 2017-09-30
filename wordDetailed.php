@@ -1,11 +1,64 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
+<?php
+/**
+ * Created by PhpStorm.
+ * User: goyal
+ * Date: 9/24/2017
+ * Time: 9:42 PM
+ */
+
+$appName = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+$connStr = "host=ec2-23-21-197-175.compute-1.amazonaws.com port=5432 dbname=d2bu35u7977nam user=zhnknooxixzmqn password=6772ed3336642783bb0c73e57993b98f4f4994386fed3ae08666a0ed9c91ec2a";
+$conn = pg_connect($connStr);
+
+ $desc = $_POST["desc"];
+ $user = $_POST['user'];
+
+$sql="SELECT count(*),head from \"activity\" where \"user\" = '$user' and \"desc\" LIKE '%$desc%' group by \"head\" ";
+$result = pg_query($conn,$sql);
+while ($row =  pg_fetch_row($result)) {
+    $resultWord[$row[1]]=$row[0];
+}
+
+$file = fopen('files/wordDetailed.csv', 'w');
+$row=['salesperson','sales'];
+fputcsv($file, $row);
+
+
+
+$wordSensation=['post-tag','question-hyperlink','search','Post Question','Post Answer'];
+$arrMapping['post-tag']="Post Tag";
+$arrMapping['question-hyperlink']="Question Searched";
+$arrMapping['search']="Searched";
+$arrMapping['Post Question']="Post Question";
+$arrMapping['Post Answer']="Post Answer";
+//$resultWord;
+
+foreach($wordSensation as $index){
+if(!isset($resultWord[$index])){
+    $resultWord[$index]=0;
+}
+
+    $temp = [$arrMapping[$index],$resultWord[$index]];
+    fputcsv($file, $temp);
+   // $temp["area"]=$index;
+   // $temp["value"]=$resultWord[$index];
+
+   // $post[]=array($temp);
+
+
+}
+
+
+fclose($file);
+
+//var_dump($resultWord);
+?>
 <style> /* set the CSS */
 
     .bar { fill: steelblue; }
 
 </style>
-<body>
+<div id="wordDetailed"></div>
 
 <!-- load the d3.js library -->
 <script src="//d3js.org/d3.v4.min.js"></script>
@@ -13,8 +66,8 @@
 
     // set the dimensions and margins of the graph
     var margin = {top: 20, right: 20, bottom: 30, left: 40},
-        width = 960 - margin.left - margin.right,
-        height = 500 - margin.top - margin.bottom;
+        width = 460 - margin.left - margin.right,
+        height = 200 - margin.top - margin.bottom;
 
     // set the ranges
     var x = d3.scaleBand()
@@ -26,7 +79,7 @@
     // append the svg object to the body of the page
     // append a 'group' element to 'svg'
     // moves the 'group' element to the top left margin
-    var svg = d3.select("body").append("svg")
+    var svg = d3.select("#wordDetailed").append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
@@ -68,4 +121,4 @@
     });
 
 </script>
-</body>
+</div>
