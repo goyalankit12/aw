@@ -7,8 +7,7 @@
 
 </style>
 <svg width="660" height="400"></svg>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
 
     var svgBarCompare = d3.select("svg"),
